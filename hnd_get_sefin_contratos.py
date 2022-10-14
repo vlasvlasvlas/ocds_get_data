@@ -149,7 +149,7 @@ for origen in listaJson2022:
                 print(dfmain.shape)
                 print("tables:")
                 print(tablename+"_p"+str(index+1))
-                #insert with replace
+                #insert with replace into paginated tables
                 to_sql(dfmain, tablename+"_p"+str(index+1), creds, index=False, if_exists='replace')
                 del dfmain
                 gc.collect()                 
